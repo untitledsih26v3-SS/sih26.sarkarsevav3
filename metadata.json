@@ -1,0 +1,6 @@
+{
+  "name": "Sarkar Seva - Agentic Public Services Platform",
+  "description": "Autonomous multi-agent government service orchestration connecting Identity, Income, and Revenue departments into one coordinated citizen journey.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
