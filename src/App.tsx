@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { supabase } from '../../supabase'; // Import our secure connection
+import { supabase } from './supabase'; // Import our secure connection
 import { 
   Building2, 
   ArrowRight, 
