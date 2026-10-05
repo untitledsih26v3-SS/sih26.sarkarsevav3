@@ -266,3 +266,31 @@ export function Screen02SignIn({ onContinue, onDepartmentLogin, onBack, autoFill
   );
 }
 
+
+// The root App component that Vite is looking for
+export default function App() {
+  const [view, setView] = useState('login');
+
+  if (view === 'dashboard') {
+    return (
+      <div className="w-full h-screen bg-slate-900 flex flex-col items-center justify-center text-white">
+        <h1 className="text-4xl font-bold mb-4 text-emerald-400">Authentication Successful!</h1>
+        <p className="text-slate-400 mb-8">Welcome to the Sarkar Seva secure portal.</p>
+        <button 
+          onClick={() => setView('login')} 
+          className="px-6 py-2 bg-blue-600 hover:bg-blue-500 rounded-xl font-medium transition-colors"
+        >
+          Sign Out
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <Screen02SignIn 
+      onContinue={(data) => setView('dashboard')} 
+      onDepartmentLogin={(data) => setView('dashboard')} 
+      onBack={() => {}} 
+    />
+  );
+}
